@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BD-Movies | Watch Movies & TV Series</title>
+    <title>BD-Movies | Watch Full Movies & TV Series Online</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -43,18 +43,18 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 18px 5%;
-            background: linear-gradient(to bottom, rgba(15, 16, 20, 0.95), rgba(15, 16, 20, 0));
-            backdrop-filter: blur(8px);
+            padding: 16px 5%;
+            background: linear-gradient(to bottom, rgba(15, 16, 20, 0.98), rgba(15, 16, 20, 0.6));
+            backdrop-filter: blur(12px);
             z-index: 1000;
-            transition: var(--transition);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 24px;
+            gap: 10px;
+            font-size: 22px;
             font-weight: 800;
             color: var(--text-light);
             text-decoration: none;
@@ -74,7 +74,7 @@
         .nav-links a {
             color: var(--text-gray);
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
             transition: var(--transition);
         }
@@ -119,11 +119,11 @@
             position: relative;
             height: 75vh;
             min-height: 500px;
-            background: linear-gradient(to top, var(--bg-dark) 8%, rgba(15, 16, 20, 0.3) 60%, rgba(15, 16, 20, 0.8)),
+            background: linear-gradient(to top, var(--bg-dark) 10%, rgba(15, 16, 20, 0.4) 60%, rgba(15, 16, 20, 0.8)),
                         url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             display: flex;
             align-items: flex-end;
-            padding: 0 5% 80px;
+            padding: 0 5% 70px;
         }
 
         .hero-content {
@@ -146,10 +146,10 @@
         }
 
         .hero-title {
-            font-size: 44px;
+            font-size: 42px;
             font-weight: 800;
             line-height: 1.2;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
         }
 
@@ -162,36 +162,30 @@
             margin-bottom: 16px;
         }
 
-        .hero-meta span {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
         .hero-meta .rating {
             color: var(--badge-star);
             font-weight: 600;
         }
 
         .hero-desc {
-            font-size: 15px;
+            font-size: 14px;
             color: #d1d5db;
             line-height: 1.6;
-            margin-bottom: 24px;
+            margin-bottom: 22px;
         }
 
         .btn-group {
             display: flex;
-            gap: 14px;
+            gap: 12px;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 12px 26px;
+            padding: 12px 24px;
             border-radius: 6px;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             text-decoration: none;
@@ -223,7 +217,7 @@
 
         /* Category Filter Chips */
         .filter-section {
-            padding: 20px 5% 10px;
+            padding: 24px 5% 10px;
             display: flex;
             gap: 10px;
             overflow-x: auto;
@@ -240,7 +234,7 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 20px;
             color: var(--text-gray);
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             cursor: pointer;
             white-space: nowrap;
@@ -255,18 +249,18 @@
 
         /* Movie Grid Section */
         .content-section {
-            padding: 30px 5% 60px;
+            padding: 24px 5% 60px;
         }
 
         .section-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         .section-title {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
             display: flex;
             align-items: center;
@@ -280,7 +274,7 @@
         .movie-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 22px;
+            gap: 20px;
         }
 
         .movie-card {
@@ -296,14 +290,14 @@
         .movie-card:hover {
             transform: translateY(-8px) scale(1.02);
             background: var(--bg-card-hover);
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.6);
-            border-color: rgba(229, 9, 20, 0.3);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.7);
+            border-color: rgba(229, 9, 20, 0.4);
         }
 
         .poster-wrapper {
             position: relative;
             width: 100%;
-            height: 260px;
+            height: 250px;
             overflow: hidden;
         }
 
@@ -321,20 +315,22 @@
         .play-overlay {
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.55);
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 8px;
             opacity: 0;
             transition: var(--transition);
         }
 
         .play-overlay i {
-            font-size: 40px;
+            font-size: 32px;
             color: var(--primary);
-            background: rgba(255, 255, 255, 0.9);
-            width: 54px;
-            height: 54px;
+            background: rgba(255, 255, 255, 0.95);
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -343,6 +339,15 @@
             box-shadow: 0 0 20px rgba(229, 9, 20, 0.8);
             transform: scale(0.8);
             transition: var(--transition);
+        }
+
+        .play-overlay span {
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 3px 10px;
+            border-radius: 12px;
         }
 
         .movie-card:hover .play-overlay {
@@ -357,7 +362,7 @@
             position: absolute;
             top: 10px;
             left: 10px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.75);
             color: var(--badge-hd);
             font-size: 11px;
             font-weight: 700;
@@ -401,12 +406,12 @@
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(12px);
             z-index: 2000;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 16px;
         }
 
         .modal.active {
@@ -416,11 +421,11 @@
         .modal-container {
             background: var(--bg-card);
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
             border-radius: 12px;
             overflow: hidden;
             position: relative;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.95);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -428,22 +433,48 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 14px 20px;
-            background: rgba(0, 0, 0, 0.4);
+            padding: 12px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .modal-title {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .server-selector {
+            display: flex;
+            gap: 8px;
+        }
+
+        .server-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--text-light);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .server-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
         }
 
         .close-btn {
             background: none;
             border: none;
             color: var(--text-gray);
-            font-size: 20px;
+            font-size: 22px;
             cursor: pointer;
             transition: var(--transition);
+            margin-left: 12px;
         }
 
         .close-btn:hover {
@@ -454,6 +485,7 @@
             width: 100%;
             aspect-ratio: 16 / 9;
             background: #000;
+            position: relative;
         }
 
         .video-player iframe {
@@ -463,7 +495,7 @@
         }
 
         footer {
-            padding: 30px 5%;
+            padding: 24px 5%;
             text-align: center;
             color: var(--text-gray);
             font-size: 13px;
@@ -481,20 +513,20 @@
                 display: none;
             }
             .hero-title {
-                font-size: 30px;
+                font-size: 28px;
             }
             .search-box input {
-                width: 150px;
+                width: 140px;
             }
             .search-box input:focus {
-                width: 180px;
+                width: 170px;
             }
             .movie-grid {
-                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-                gap: 14px;
+                grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+                gap: 12px;
             }
             .poster-wrapper {
-                height: 200px;
+                height: 190px;
             }
         }
     </style>
@@ -516,30 +548,30 @@
         </ul>
         <div class="search-box">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="searchInput" placeholder="Search movies or series...">
+            <input type="text" id="searchInput" placeholder="Search any movie...">
         </div>
     </nav>
 
     <!-- Hero Banner -->
     <section class="hero">
         <div class="hero-content">
-            <span class="hero-badge"><i class="fa-solid fa-bolt"></i> Trending #1</span>
-            <h1 class="hero-title">Avatar: The Way of Water</h1>
+            <span class="hero-badge"><i class="fa-solid fa-bolt"></i> Featured Movie</span>
+            <h1 class="hero-title">Oppenheimer</h1>
             <div class="hero-meta">
-                <span class="rating"><i class="fa-solid fa-star"></i> 7.8</span>
-                <span><i class="fa-regular fa-clock"></i> 3h 12m</span>
-                <span>2022</span>
-                <span>Action / Sci-Fi</span>
+                <span class="rating"><i class="fa-solid fa-star"></i> 8.9</span>
+                <span><i class="fa-regular fa-clock"></i> 3h 00m</span>
+                <span>2023</span>
+                <span>Biography / Drama</span>
             </div>
             <p class="hero-desc">
-                Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.
+                The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb during World War II. Directed by Christopher Nolan.
             </p>
             <div class="btn-group">
-                <button class="btn btn-primary" onclick="openTrailer('Avatar: The Way of Water', 'd9MyW72ELq0')">
-                    <i class="fa-solid fa-play"></i> Watch Trailer
+                <button class="btn btn-primary" onclick="playMovie('Oppenheimer', '872585', 'movie')">
+                    <i class="fa-solid fa-play"></i> Watch Full Movie
                 </button>
-                <button class="btn btn-secondary" onclick="openDetails()">
-                    <i class="fa-solid fa-circle-info"></i> More Details
+                <button class="btn btn-secondary" onclick="playTrailer('Oppenheimer', 'uYPbbksJxIg')">
+                    <i class="fa-solid fa-film"></i> Trailer
                 </button>
             </div>
         </div>
@@ -559,10 +591,10 @@
     <!-- Movies Section -->
     <section class="content-section" id="movies">
         <div class="section-header">
-            <h2 class="section-title"><i class="fa-solid fa-fire"></i> Popular & Latest Releases</h2>
+            <h2 class="section-title"><i class="fa-solid fa-play-circle"></i> Click Any Movie to Stream Full Video</h2>
         </div>
         <div class="movie-grid" id="movieGrid">
-            <!-- Dynamically Rendered by JS -->
+            <!-- Rendered by JS -->
         </div>
     </section>
 
@@ -570,19 +602,24 @@
     <div class="modal" id="videoModal">
         <div class="modal-container">
             <div class="modal-header">
-                <div class="modal-title" id="modalTitle">Playing Trailer</div>
-                <button class="close-btn" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+                <div class="modal-title" id="modalTitle">Now Streaming</div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <div class="server-selector" id="serverSelector">
+                        <button class="server-btn active" onclick="switchServer(1)">Server 1</button>
+                        <button class="server-btn" onclick="switchServer(2)">Server 2</button>
+                    </div>
+                    <button class="close-btn" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
             </div>
             <div class="video-player">
-                <iframe id="videoIframe" src="" allowfullscreen allow="autoplay"></iframe>
+                <iframe id="videoIframe" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 <span>BD-Movies</span>. Hosted on GitHub Pages.</p>
-        <p style="margin-top: 6px; font-size: 11px;">Powered by Community Providers & Modern Web Technologies.</p>
+        <p>&copy; 2026 <span>BD-Movies</span>. Streaming Powered by Open Community Media Servers.</p>
     </footer>
 
     <!-- JavaScript -->
@@ -590,33 +627,39 @@
         const moviesData = [
             {
                 id: 1,
+                title: "Oppenheimer",
+                year: "2023",
+                rating: "8.9",
+                genre: "thriller",
+                quality: "4K UHD",
+                poster: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=600&q=80",
+                tmdbId: "872585",
+                type: "movie",
+                trailerId: "uYPbbksJxIg"
+            },
+            {
+                id: 2,
                 title: "Avatar: The Way of Water",
                 year: "2022",
                 rating: "7.8",
                 genre: "sci-fi",
                 quality: "4K UHD",
                 poster: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
+                tmdbId: "76600",
+                type: "movie",
                 trailerId: "d9MyW72ELq0"
             },
             {
-                id: 2,
-                title: "Oppenheimer",
-                year: "2023",
-                rating: "8.9",
-                genre: "thriller",
-                quality: "1080p",
-                poster: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=600&q=80",
-                trailerId: "uYPbbksJxIg"
-            },
-            {
                 id: 3,
-                title: "Hawa (হাওয়া)",
-                year: "2022",
-                rating: "8.1",
-                genre: "bangla",
-                quality: "HD",
-                poster: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80",
-                trailerId: "0YvVw1E5pE0"
+                title: "Dune: Part Two",
+                year: "2024",
+                rating: "8.6",
+                genre: "sci-fi",
+                quality: "4K UHD",
+                poster: "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=600&q=80",
+                tmdbId: "693134",
+                type: "movie",
+                trailerId: "Way9Dexny3w"
             },
             {
                 id: 4,
@@ -626,49 +669,62 @@
                 genre: "action",
                 quality: "4K UHD",
                 poster: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
+                tmdbId: "603692",
+                type: "movie",
                 trailerId: "qEVUtrk8_B4"
             },
             {
                 id: 5,
-                title: "Priyotoma (প্রিয়তমা)",
-                year: "2023",
-                rating: "7.6",
-                genre: "bangla",
-                quality: "HD",
-                poster: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80",
-                trailerId: "2xM3c6C1sN8"
-            },
-            {
-                id: 6,
                 title: "Spider-Man: Across the Spider-Verse",
                 year: "2023",
                 rating: "8.7",
                 genre: "anime",
                 quality: "1080p",
                 poster: "https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=600&q=80",
+                tmdbId: "569094",
+                type: "movie",
                 trailerId: "cqGjhVJWtEg"
             },
             {
-                id: 7,
-                title: "Stranger Things (Season 4)",
+                id: 6,
+                title: "Stranger Things (TV Series)",
                 year: "2022",
                 rating: "8.7",
                 genre: "series",
                 quality: "4K UHD",
                 poster: "https://images.unsplash.com/photo-1509281373149-e957c6296406?auto=format&fit=crop&w=600&q=80",
+                tmdbId: "66732",
+                type: "tv",
                 trailerId: "yQEondeGvLk"
             },
             {
+                id: 7,
+                title: "Hawa (হাওয়া)",
+                year: "2022",
+                rating: "8.1",
+                genre: "bangla",
+                quality: "HD",
+                poster: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80",
+                tmdbId: "1009187",
+                type: "movie",
+                trailerId: "0YvVw1E5pE0"
+            },
+            {
                 id: 8,
-                title: "Dune: Part Two",
-                year: "2024",
-                rating: "8.6",
-                genre: "sci-fi",
-                quality: "4K UHD",
-                poster: "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=600&q=80",
-                trailerId: "Way9Dexny3w"
+                title: "Priyotoma (প্রিয়তমা)",
+                year: "2023",
+                rating: "7.6",
+                genre: "bangla",
+                quality: "HD",
+                poster: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80",
+                tmdbId: "1147573",
+                type: "movie",
+                trailerId: "2xM3c6C1sN8"
             }
         ];
+
+        let currentItem = null;
+        let currentServer = 1;
 
         const movieGrid = document.getElementById('movieGrid');
         const searchInput = document.getElementById('searchInput');
@@ -676,19 +732,20 @@
         function renderMovies(list) {
             movieGrid.innerHTML = '';
             if (list.length === 0) {
-                movieGrid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; color: #888; padding: 40px;">No movies found matching your search.</div>';
+                movieGrid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; color: #888; padding: 40px;">No movies found.</div>';
                 return;
             }
             list.forEach(item => {
                 const card = document.createElement('div');
                 card.className = 'movie-card';
-                card.onclick = () => openTrailer(item.title, item.trailerId);
+                card.onclick = () => playMovie(item.title, item.tmdbId, item.type);
                 card.innerHTML = `
                     <div class="poster-wrapper">
                         <img src="${item.poster}" alt="${item.title}" loading="lazy">
                         <span class="quality-badge">${item.quality}</span>
                         <div class="play-overlay">
                             <i class="fa-solid fa-play"></i>
+                            <span>Watch Movie</span>
                         </div>
                     </div>
                     <div class="movie-info">
@@ -726,23 +783,50 @@
             }
         }
 
-        // Modal Controls
-        function openTrailer(title, youtubeId) {
-            const modal = document.getElementById('videoModal');
+        // Streaming Player
+        function playMovie(title, tmdbId, type) {
+            currentItem = { title, tmdbId, type };
+            currentServer = 1;
+            document.getElementById('serverSelector').style.display = 'flex';
+            document.getElementById('modalTitle').innerHTML = `<i class="fa-solid fa-circle-play" style="color: #e50914;"></i> Streaming: ${title}`;
+            loadStreamUrl();
+            document.getElementById('videoModal').classList.add('active');
+        }
+
+        function loadStreamUrl() {
             const iframe = document.getElementById('videoIframe');
-            document.getElementById('modalTitle').textContent = `Now Playing: ${title}`;
-            iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
-            modal.classList.add('active');
+            if (currentServer === 1) {
+                iframe.src = currentItem.type === 'tv'
+                    ? `https://vidsrc.cc/v2/embed/tv/${currentItem.tmdbId}/1/1`
+                    : `https://vidsrc.cc/v2/embed/movie/${currentItem.tmdbId}`;
+            } else {
+                iframe.src = currentItem.type === 'tv'
+                    ? `https://multiembed.mov/?video_id=${currentItem.tmdbId}&tmdb=1&s=1&e=1`
+                    : `https://multiembed.mov/?video_id=${currentItem.tmdbId}&tmdb=1`;
+            }
+        }
+
+        function switchServer(serverNum) {
+            currentServer = serverNum;
+            document.querySelectorAll('.server-btn').forEach((btn, idx) => {
+                btn.classList.toggle('active', idx === serverNum - 1);
+            });
+            loadStreamUrl();
+        }
+
+        function playTrailer(title, youtubeId) {
+            document.getElementById('serverSelector').style.display = 'none';
+            document.getElementById('modalTitle').innerHTML = `<i class="fa-brands fa-youtube" style="color: #e50914;"></i> Official Trailer: ${title}`;
+            document.getElementById('videoIframe').src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
+            document.getElementById('videoModal').classList.add('active');
         }
 
         function closeModal() {
             const modal = document.getElementById('videoModal');
-            const iframe = document.getElementById('videoIframe');
-            iframe.src = '';
+            document.getElementById('videoIframe').src = '';
             modal.classList.remove('active');
         }
 
-        // Close on clicking outside modal
         window.onclick = function(e) {
             const modal = document.getElementById('videoModal');
             if (e.target === modal) {
